@@ -1,9 +1,11 @@
+import '../../styles/productCard.scss'
+
 interface ProductCountTotalInterface {
     totalProducts: number;
 }
 
 const ProductCountTotal = ({ totalProducts }: ProductCountTotalInterface) => {
-    return <p>Total de Produtos: {totalProducts}</p>;
+    return <p className="count-products">Produtos exibidos: <b>{totalProducts}</b></p>;
 };
 
 export default ProductCountTotal;

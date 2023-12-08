@@ -8,15 +8,35 @@
         margin-left: auto;
         margin-right: auto;
         display: flex;
+        padding: 2rem;
+        min-height: 100vh; 
+
+    
+        @media (max-width: 625px) {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
 
     .products-list {
         width: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+    }
+
+    .aside-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .not-found {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
     }
 
 }

@@ -2,7 +2,6 @@
 import { ReactNode } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../../styles/globals.scss'
 
 type LayoutInterface = {
     children: ReactNode;
@@ -10,7 +9,7 @@ type LayoutInterface = {
 
 const LayoutDefault = ({ children }: LayoutInterface) => {
     return (
-        <div className="layout-default">
+        <div>
             <Navbar />
             <main>
                 {children}

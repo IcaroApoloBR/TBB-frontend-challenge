@@ -7,8 +7,6 @@ import LayoutDefault from './components/Layout/LayoutDefault';
 
 import productsCategory from './data/productsCategory.json';
 
-import '../src/styles/globals.scss'
-
 export function Router() {
     const products = productsCategory.data.nodes;
 

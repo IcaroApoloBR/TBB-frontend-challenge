@@ -8,7 +8,7 @@ const SearchBar = ({ searchTerm, onSearchChange }: SearchBarInterface) => {
     return (
         <input
             type="text"
-            placeholder="Buscar por nome"
+            placeholder="Filtrar por nome"
             value={searchTerm}
             onChange={(e) => onSearchChange(e.target.value)}
             className="search-bar"

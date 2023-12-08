@@ -1,6 +1,7 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ProductEntity from '../types/ProductEntity';
 import ProductSelected from '../components/Product/ProductSelected';
+import '../styles/productCard.scss';
 
 interface ProductDetailInterface {
     products: ProductEntity[];
@@ -15,8 +16,10 @@ const ProductDetail = ({ products }: ProductDetailInterface) => {
     }
 
     return (
-        <div className="product-detail-container">
-            <ProductSelected product={selectedProduct} />
+        <div className="product-details">
+            <Link to="/" className="go-back">Voltar aos produtos</Link>
+
+            <ProductSelected product={selectedProduct} productDetail />
         </div>
     );
 };

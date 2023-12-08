@@ -5,13 +5,17 @@ import { motion } from 'framer-motion';
 import ProductEntity from '../../types/ProductEntity';
 
 import '../../styles/productCard.scss'
+import MaskText from '../../utils/MaskText';
 
 interface ProductSelectedInterface {
     product: ProductEntity;
-    index: number
+    index?: number | undefined;
+    productDetail: boolean
 }
 
-const ProductSelected = ({ product, index }: ProductSelectedInterface) => {
+const ProductSelected = ({ product, index, productDetail }: ProductSelectedInterface) => {
+    const displayIndex = index !== undefined ? index : 0;
+
     const stagger = 0.15;
 
     const variants = {
@@ -25,7 +29,7 @@ const ProductSelected = ({ product, index }: ProductSelectedInterface) => {
             initial="hidden"
             animate="visible"
             transition={{
-                delay: index * stagger,
+                delay: displayIndex * stagger,
                 ease: "easeInOut",
                 duration: 0.5,
             }}
@@ -34,9 +38,20 @@ const ProductSelected = ({ product, index }: ProductSelectedInterface) => {
             title="Visualizar produto"
         >
             <Link to={`/product/${product.id}`}>
-                <img src={product.images[0].asset.url} alt={product.images[0].alt} />
-                <h3>{product.name}</h3>
-                <p>{product.category.name}</p>
+                <div className="resize-items">
+                    <p>{product.category.name}</p>
+
+                    <img src={product.images[0].asset.url} alt={product.images[0].alt} />
+
+                    <h3>{product.name}</h3>
+                </div>
+
+                {productDetail &&
+                    <p className="short-description" title={product.shortDescription}>
+                        <MaskText text={product.shortDescription} maxLength={140} />
+                    </p>
+                }
+
             </Link>
         </motion.div>
     );

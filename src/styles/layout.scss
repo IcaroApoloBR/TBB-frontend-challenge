@@ -45,6 +45,11 @@
         font-weight: 600;
         cursor: pointer;
         color: #fff;
+        display: none;
+
+        @media (min-width: 425px) {
+            display: flex;
+        }
     }
 
     .mobile {

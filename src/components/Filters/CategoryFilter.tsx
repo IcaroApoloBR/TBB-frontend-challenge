@@ -9,7 +9,7 @@ interface CategoryFilterInterface {
 const CategoryFilter = ({ uniqueCategories, selectedCategories, onCategoryToggle }: CategoryFilterInterface) => {
     return (
         <div className="category-filter">
-            <label className="legend">Filtros:</label>
+            <label className="legend">Categorias:</label>
             {uniqueCategories.map((category) => (
                 <div key={category.id} className="category-item">
                     <input
@@ -19,7 +19,7 @@ const CategoryFilter = ({ uniqueCategories, selectedCategories, onCategoryToggle
                         onChange={() => onCategoryToggle(category.id)}
                     />
                     <label htmlFor={category.id}>
-                        {category.name} ({category.count} itens)
+                        {category.name} (<b>{category.count}</b>)
                     </label>
                 </div>
             ))}

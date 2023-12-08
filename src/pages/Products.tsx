@@ -19,7 +19,6 @@ const Products = ({ products }: ProductsInterface) => {
   const [uniqueCategories, setUniqueCategories] = useState<
     { id: string; name: string; count: number }[]
   >([]);
-  const [totalProducts, setTotalProducts] = useState<number>(0);
 
   useEffect(() => {
     const categoryCounts: { [categoryId: string]: number } = {};
@@ -37,7 +36,6 @@ const Products = ({ products }: ProductsInterface) => {
     }));
 
     setUniqueCategories(uniqueCategoriesWithCount);
-    setTotalProducts(products.length);
   }, [products]);
 
   const filteredProducts = products.filter((product) => {
@@ -59,10 +57,10 @@ const Products = ({ products }: ProductsInterface) => {
   return (
     <section className="section">
       <main className="products">
-        
+
         <aside className="aside-filters">
           <ProductCountTotal
-            totalProducts={totalProducts}
+            totalProducts={filteredProducts.length}
           />
 
           <SearchBar
@@ -78,9 +76,15 @@ const Products = ({ products }: ProductsInterface) => {
         </aside>
 
         <div className="products-list">
-          {filteredProducts.map((product, index) => (
-            <ProductSelected key={product.id} product={product} index={index} />
-          ))}
+          {filteredProducts.length > 0 ? (
+            <div className="products-list">
+              {filteredProducts.map((product, index) => (
+                <ProductSelected key={product.id} product={product} index={index} />
+              ))}
+            </div>
+          ) : (
+            <p className="not-found">* Infelizmente não foi possível encontrar nenhum produto com sua busca.</p>
+          )}
         </div>
       </main>
     </section>
