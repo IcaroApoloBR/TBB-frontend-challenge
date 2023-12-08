@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
-import '../../styles/globals.scss'
+import scrollToTop from '../../assets/navbar/scrollToTop.svg';
+import '../../styles/layout.scss'
 
 const ScrollToTopButton = () => {
     const [showButton, setShowButton] = useState(false);
@@ -30,7 +31,7 @@ const ScrollToTopButton = () => {
                     onClick={handleScrollToTop}
                     className="scroll-to-top"
                 >
-                    SUBIR
+                    <img src={scrollToTop} alt="Scroll to Top" className="scroll-to-top"/>
                 </motion.button>
             )}
         </AnimatePresence>

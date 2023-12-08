@@ -1,0 +1,146 @@
+.navbar {
+    // position: fixed;
+    // top: 0;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    width: 100%;
+    background-color: #006BF7;
+
+    @media (min-width: 425px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .component {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80rem;
+        height: 4.25rem;
+    }
+
+    .links {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    img {
+        object-fit: contain;
+        width: 7rem;
+    }
+
+    ul {
+        display: none;
+        flex-direction: row;
+        gap: 2.5rem;
+        list-style-type: none;
+
+        @media (min-width: 425px) {
+            display: flex;
+        }
+    }
+
+    li {
+        font-weight: 600;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .mobile {
+        display: flex;
+        flex: 1 1 0%;
+        justify-content: flex-end;
+        align-items: center;
+
+        .icon {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        @media (min-width: 425px) {
+            display: none;
+        }
+
+        div {
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 3.5rem;
+            z-index: 50;
+            padding: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            justify-content: center;
+            border-width: 1px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            list-style-type: none;
+        }
+    }
+
+}
+
+.footer {
+    background-color: #006BF7;
+
+    .component {
+        padding: 1rem;
+        color: #fff;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 1024px) {
+            justify-content: space-between;
+        }
+    }
+
+    a {
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+
+    .items-social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-img {
+        object-fit: contain;
+        width: 2rem;
+        height: 2.5rem;
+        cursor: pointer;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 9999px;
+    width: 3rem;
+    height: 3rem;
+}

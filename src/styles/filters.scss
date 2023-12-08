@@ -1,0 +1,20 @@
+.search-bar {}
+
+.category-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+
+    .category-item {
+        display: flex;
+        gap: 0.4rem;
+        font-weight: 400;
+        accent-color: #0f0;
+    }
+
+    .legend {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+}

@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import ProductEntity from '../types/ProductEntity';
-// import '../styles/globals.scss';
+
 import ProductCountTotal from '../components/Product/ProductCountTotal';
+import ProductSelected from '../components/Product/ProductSelected';
 import SearchBar from '../components/Filters/SearchBar';
 import CategoryFilter from '../components/Filters/CategoryFilter';
-import ProductSelected from '../components/Product/ProductSelected';
+
+import ProductEntity from '../types/ProductEntity';
+
+import '../styles/section.scss';
 
 interface ProductsInterface {
   products: ProductEntity[];
@@ -54,28 +57,33 @@ const Products = ({ products }: ProductsInterface) => {
   };
 
   return (
-    <div>
-      <ProductCountTotal
-        totalProducts={totalProducts}
-      />
+    <section className="section">
+      <main className="products">
+        
+        <aside className="aside-filters">
+          <ProductCountTotal
+            totalProducts={totalProducts}
+          />
 
-      <SearchBar
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
-      />
+          <SearchBar
+            searchTerm={searchTerm}
+            onSearchChange={setSearchTerm}
+          />
 
-      <CategoryFilter
-        uniqueCategories={uniqueCategories}
-        selectedCategories={selectedCategories}
-        onCategoryToggle={handleCategoryToggle}
-      />
+          <CategoryFilter
+            uniqueCategories={uniqueCategories}
+            selectedCategories={selectedCategories}
+            onCategoryToggle={handleCategoryToggle}
+          />
+        </aside>
 
-      <div>
-        {filteredProducts.map((product) => (
-          <ProductSelected key={product.id} product={product} />
-        ))}
-      </div>
-    </div>
+        <div className="products-list">
+          {filteredProducts.map((product, index) => (
+            <ProductSelected key={product.id} product={product} index={index} />
+          ))}
+        </div>
+      </main>
+    </section>
   );
 };
 

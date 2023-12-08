@@ -1,3 +1,5 @@
+import '../../styles/filters.scss'
+
 interface CategoryFilterInterface {
     uniqueCategories: { id: string; name: string; count: number }[];
     selectedCategories: string[];
@@ -6,10 +8,10 @@ interface CategoryFilterInterface {
 
 const CategoryFilter = ({ uniqueCategories, selectedCategories, onCategoryToggle }: CategoryFilterInterface) => {
     return (
-        <div>
-            <label>Categorias:</label>
+        <div className="category-filter">
+            <label className="legend">Filtros:</label>
             {uniqueCategories.map((category) => (
-                <div key={category.id}>
+                <div key={category.id} className="category-item">
                     <input
                         type="checkbox"
                         id={category.id}
