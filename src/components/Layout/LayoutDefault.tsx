@@ -4,11 +4,11 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import '../../styles/globals.scss'
 
-type LayoutProps = {
+type LayoutInterface = {
     children: ReactNode;
 };
 
-const LayoutDefault = ({ children }: LayoutProps) => {
+const LayoutDefault = ({ children }: LayoutInterface) => {
     return (
         <div className="layout-default">
             <Navbar />
