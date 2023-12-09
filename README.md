@@ -29,10 +29,7 @@ Execute os seguintes comandos para configurar o Frontend.
 
 ### Imagens do Projeto
 <div align="center">
-<img src="github/project.gif" alt="Login" width="400" height="300">
-![cover](project.gif)
-![cover](github/project.gif)
-![cover](.github/cover.gif?style=flat)
+<img src="github/project.gif" alt="Login" width="800" height="400">
 </div>
 
 ### Detalhes dos Requisitos para avaliação
