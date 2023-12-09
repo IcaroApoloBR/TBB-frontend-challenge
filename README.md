@@ -7,11 +7,11 @@ Clone o repositório do projeto:
 
 Execute os seguintes comandos para configurar o Frontend.
 -  Frontend:
-    Entre na pasta do frontend:
+    - Entre na pasta do frontend:
       -  cd TBB-frontend-challenge
-    Instale as dependências:
+    - Instale as dependências:
       -  npm install
-    Inicie o servidor de desenvolvimento do frontend:
+    - Inicie o servidor de desenvolvimento do frontend:
       - npm run dev
 
 ### Versão do NODE   
@@ -29,7 +29,10 @@ Execute os seguintes comandos para configurar o Frontend.
 
 ### Imagens do Projeto
 <div align="center">
-  <img src="github/project.gif" alt="Login" width="400" height="300">
+<img src="github/project.gif" alt="Login" width="400" height="300">
+![cover](project.gif)
+![cover](github/project.gif)
+![cover](.github/cover.gif?style=flat)
 </div>
 
 ### Detalhes dos Requisitos para avaliação
