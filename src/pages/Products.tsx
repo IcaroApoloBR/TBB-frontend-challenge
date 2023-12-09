@@ -11,7 +11,6 @@ import '../styles/section.scss';
 
 interface ProductsInterface {
   products: ProductEntity[];
-  index: number | undefined;
 }
 
 const Products = ({ products }: ProductsInterface) => {

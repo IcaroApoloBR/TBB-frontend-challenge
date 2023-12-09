@@ -7,7 +7,12 @@ interface ProductDetailInterface {
     products: ProductEntity[];
 }
 
-const ProductDetail = ({ products }: ProductDetailInterface) => {
+interface ProductDetailProps extends ProductDetailInterface {
+    index?: number | undefined;
+    productDetail: boolean;
+}
+
+const ProductDetail = ({ products }: ProductDetailProps) => {
     const { id } = useParams<{ id: string }>();
     const selectedProduct = products.find((product) => product.id === id);
 
@@ -19,7 +24,7 @@ const ProductDetail = ({ products }: ProductDetailInterface) => {
         <div className="product-details">
             <Link to="/" className="go-back">Voltar aos produtos</Link>
 
-            <ProductSelected product={selectedProduct} productDetail />
+            <ProductSelected product={selectedProduct} productDetail={true} />
         </div>
     );
 };

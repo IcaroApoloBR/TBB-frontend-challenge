@@ -24,7 +24,7 @@ export function Router() {
             <Route path="/product/:id"
                 element={
                     <LayoutDefault>
-                        <ProductDetail products={products} />
+                        <ProductDetail products={products} productDetail={true} />
                     </LayoutDefault>
                 }
             />
