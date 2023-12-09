@@ -8,10 +8,10 @@
     border-radius: 0.25rem;
     padding: 0.7rem;
     width: 16.5rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
     border: 0.1rem solid #d8c1ed;
 
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     transform-origin: center;
     opacity: 1;
 

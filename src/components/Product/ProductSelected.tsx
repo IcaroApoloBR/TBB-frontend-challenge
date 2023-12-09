@@ -18,7 +18,7 @@ interface ProductSelectedProps extends ProductSelectedInterface {
 const ProductSelected = ({ product, index, productDetail }: ProductSelectedProps) => {
     const displayIndex = index !== undefined ? index : 0;
 
-    const stagger = 0.15;
+    const stagger = 0.2;
 
     const variants = {
         hidden: { opacity: 0 },
