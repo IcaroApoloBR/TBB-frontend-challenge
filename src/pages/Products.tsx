@@ -11,6 +11,7 @@ import '../styles/section.scss';
 
 interface ProductsInterface {
   products: ProductEntity[];
+  index: number | undefined;
 }
 
 const Products = ({ products }: ProductsInterface) => {
@@ -79,7 +80,7 @@ const Products = ({ products }: ProductsInterface) => {
           {filteredProducts.length > 0 ? (
             <div className="products-list">
               {filteredProducts.map((product, index) => (
-                <ProductSelected key={product.id} product={product} index={index} />
+                <ProductSelected key={product.id} product={product} index={index} productDetail={false} />
               ))}
             </div>
           ) : (

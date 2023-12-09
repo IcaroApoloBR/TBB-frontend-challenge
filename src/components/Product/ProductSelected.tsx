@@ -9,9 +9,10 @@ import MaskText from '../../utils/MaskText';
 
 interface ProductSelectedInterface {
     product: ProductEntity;
-    index?: number | undefined;
-    productDetail: boolean
+    index: number | undefined;
+    productDetail: boolean;
 }
+
 
 const ProductSelected = ({ product, index, productDetail }: ProductSelectedInterface) => {
     const displayIndex = index !== undefined ? index : 0;
