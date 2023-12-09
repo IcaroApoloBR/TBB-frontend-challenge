@@ -12,7 +12,7 @@ const ScrollToTopButton = () => {
 
     useEffect(() => {
         const handleScrollButtonVisibility = () => {
-            window.pageYOffset > 1 ? setShowButton(true) : setShowButton(false);
+            window.scrollY > 1 ? setShowButton(true) : setShowButton(false);
         };
 
         window.addEventListener('scroll', handleScrollButtonVisibility);

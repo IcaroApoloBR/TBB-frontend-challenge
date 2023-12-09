@@ -40,12 +40,12 @@ const ProductSelected = ({ product, index, productDetail }: ProductSelectedProps
             title="Visualizar produto"
         >
             <Link to={`/product/${product.id}`}>
-                <div className="resize-items">
-                    <p>{product.category.name}</p>
+                <div className="resize-item">
+                    <h3>{product.name}</h3>
 
                     <img src={product.images[0].asset.url} alt={product.images[0].alt} />
 
-                    <h3>{product.name}</h3>
+                    <p>{product.category.name}</p>
                 </div>
 
                 {productDetail &&

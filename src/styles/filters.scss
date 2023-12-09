@@ -1,15 +1,14 @@
 .search-bar {
     padding: 0.75rem;
     border-radius: 0.5rem;
-    border-width: 2px;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 500;
-    color: #111827;
+    border: 0.125rem solid #d8c1ed;
 
     &:focus {
         outline: none;
-        border-color: #006BF7;
+        border: 0.125rem solid #bba1d4;
     }
 }
 
@@ -24,7 +23,7 @@
         align-items: center;
         gap: 0.4rem;
         font-weight: 400;
-        accent-color: #006BF7;
+        accent-color: #d8c1ed;
     }
 
     .legend {
@@ -38,7 +37,7 @@
     }
 
     input[type="checkbox"]:checked+label {
-        color: #006BF7;
+        color: #bba1d4;
         font-weight: 500;
     }
 }
