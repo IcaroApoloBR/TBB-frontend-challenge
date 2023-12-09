@@ -13,6 +13,8 @@ Execute os seguintes comandos para configurar o Frontend.
       -  npm install
     - Inicie o servidor de desenvolvimento do frontend:
       - npm run dev
+    - Rodar testes unitários:
+      - npm run test
 
 ### Versão do NODE   
     v20.10.0
@@ -22,14 +24,18 @@ Execute os seguintes comandos para configurar o Frontend.
 ### Depêndencias do Frontend
     "dependencies": {
     "framer-motion": "^10.16.16",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1"
     },
 
-### Imagens do Projeto
+### Vídeo e testes do Projeto
 <div align="center">
 <img src="github/project.gif" alt="Login" width="800" height="400">
+</div>
+<div align="center">
+<img src="github/tests.png" alt="Login" width="250" height="100">
 </div>
 
 ### Detalhes dos Requisitos para avaliação
